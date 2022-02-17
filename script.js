@@ -32,7 +32,7 @@ var beweegAlles = function () {
   // kogel
 };
 
-/**
+/** 
  * Checkt botsingen
  * Verwijdert neergeschoten dingen
  * Updatet globale variabelen punten en health
