@@ -51,7 +51,8 @@ var verwerkBotsing = function () {
  */
 var tekenAlles = function () {
   // achtergrond
-
+  fill("brown");
+  rect(0,0, 1280,720);
   // vijand
 
   // kogel
