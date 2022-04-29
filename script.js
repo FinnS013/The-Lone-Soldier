@@ -22,6 +22,9 @@ const KEY_D = 68;
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 
+var vijandX = 800; // x-positie van vijand
+var vijandY = 400; // y-positie van vijand
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -73,8 +76,13 @@ var tekenAlles = function () {
   // achtergrond
   fill("brown");
   rect(0,0, 1280,720);
+  
   // vijand
-
+  fill("green");
+  rect(vijandX - 25, vijandY - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX, vijandY, 10, 10);
+  
   // kogel
 
   // speler
