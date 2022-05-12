@@ -15,19 +15,19 @@ Geef aan met [x] welke onderdelen af zijn
 ### Basisstappen
 Basis: uitleg, spelen, afgaan en punten
 - [x] 1. maak index.html, style.css en script.js met canvas
-- [ ] 2. teken speler met wapen
+- [X] 2. teken speler met wapen
         - Zet je code in de functie tekenAlles()
 - [x] 3. beweeg speler
         - Zet je code in de functie beweegAlles()
         - Kies de afmeting van speler
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
 - [ ] 4. *(pas de volgende stappen in de planning zelf aan)*
-- [ ] 5. teken je tegenspeler (vijanden of wild dier)
+- [X] 5. teken je tegenspeler (vijanden of wild dier)
 - [ ] 6. kogel (als die in je spel zit)
 - [ ] 7. beweeg de tegenspeler
 - [ ] x. zet punten op het scherm(tegen spelers moeten verslagen worden) 
 - [ ] x. zorg dat je punten kunt scoren(vijanden kunnen dood gaan)
-- [ ] x. zorg dat je af kunt(vijand hit je)
+- [X] x. zorg dat je af kunt(vijand hit je)
 - [ ] x. maak game-over-scherm
 - [ ] x. maak uitlegscherm
 
