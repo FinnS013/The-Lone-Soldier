@@ -145,5 +145,8 @@ function draw() {
   if (spelStatus === GAMEOVER) {
     fill(0, 0, 0);// game-over scherm
     rect(0, 0, 1280, 720)
+    textSize(100);
+    fill("white");
+    text("GAME OVER", 300, 350)
   }
 }
