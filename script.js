@@ -148,5 +148,6 @@ function draw() {
     textSize(100);
     fill("white");
     text("GAME OVER", 300, 350)
+    text("Press ... for new game", 150, 450)
   }
 }
