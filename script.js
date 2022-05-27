@@ -91,7 +91,13 @@ var verwerkBotsing = function () {
      }
   
   // botsing kogel tegen vijand
-
+  if (kogelX - vijandX < 50 &&
+      kogelX - vijandX > -50 &&
+      kogelY - vijandY < 50 &&
+      kogelY - vijandY > -50) {
+      console.log("kogel raak");
+     }
+  
   // update punten en health
 
 };
