@@ -32,6 +32,9 @@ var kogelVliegt = false;
 var doelwitX = 0;
 var doelwitY = 0;
 
+var kogelSnelheidX = 0;
+var kogelSnelheidY = 0;
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
