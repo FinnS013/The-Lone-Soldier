@@ -78,20 +78,28 @@ var beweegAlles = function () {
     kogelY = plaatsAfvurenY;
   }
 
+  var richtingY = doelwitY - plaatsAfvurenY;
+  var richtingX = doelwitX - plaatsAfvurenX;
+
+  var correctieSnelheid = ((richtingX * richtingX) + (richtingY * richtingY)) / 1.4142
+  
+  var snelheidY = richtingY / correctieSnelheid;
+  var snelheidX = richtingX / correctieSnelheid;
+  
   if (kogelVliegt === true && doelwitY > plaatsAfvurenY) { // kogel vliegt
-    kogelY = kogelY + 1;
+    kogelY = kogelY + 1 * (richtingY * snelheidY);
   }
 
   if (kogelVliegt === true && doelwitY < plaatsAfvurenY) { // kogel vliegt
-    kogelY = kogelY - 1;
+    kogelY = kogelY - 1 * (richtingY * snelheidY);
   }
 
   if (kogelVliegt === true && doelwitX > plaatsAfvurenX) { // kogel vliegt
-    kogelX = kogelX + 1;
+    kogelX = kogelX + 1 * (richtingX * snelheidX);
   }
 
   if (kogelVliegt === true && doelwitX < plaatsAfvurenX) { // kogel vliegt
-    kogelX = kogelX - 1;
+    kogelX = kogelX - 1 * (richtingX * snelheidX);
   }
 
   if (kogelVliegt === true && 
