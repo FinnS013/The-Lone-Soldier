@@ -25,6 +25,10 @@ var spelerY = 600; // y-positie van speler
 var vijandX = 800; // x-positie van vijand
 var vijandY = 400; // y-positie van vijand
 
+var kogelX = 400; // x-positie van kogel
+var kogelY = 400; // y-positie van kogel
+var kogelVliegt = false;
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -53,6 +57,22 @@ var beweegAlles = function () {
   // vijand
 
   // kogel
+  if (kogelVliegt === false &&
+      keyIsDown(32)) {//schiet
+    kogelVliegt = true;
+    kogelX = spelerX;
+    kogelY = spelerY;
+  }
+
+  if (kogelVliegt === true) { // kogel vliegt
+    kogelY = kogelY - 1;
+  }
+
+  if (kogelVliegt === true && 
+      kogelY < 0) { // kogel verdwijnt
+    kogelVliegt = false;
+  }
+    
 };
 
 /** 
@@ -91,7 +111,9 @@ var tekenAlles = function () {
   ellipse(vijandX, vijandY, 10, 10);
   
   // kogel
-
+  fill("silver");
+  ellipse(kogelX, kogelY, 20, 20);
+  
   // speler
   fill("white");
   rect(spelerX - 25, spelerY - 25, 50, 50);
