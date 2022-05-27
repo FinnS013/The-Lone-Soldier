@@ -31,6 +31,8 @@ var kogelVliegt = false;
 
 var doelwitX = 0;
 var doelwitY = 0;
+var plaatsAfvurenX = 0;
+var plaatsAfvurenY = 0;
 
 var kogelSnelheidX = 0;
 var kogelSnelheidY = 0;
@@ -66,27 +68,29 @@ var beweegAlles = function () {
   if (mouseIsPressed && kogelVliegt === false) {
     doelwitX = mouseX;
     doelwitY = mouseY;
+    plaatsAfvurenX = spelerX;
+    plaatsAfvurenY = spelerY;
   }
   
   if (kogelVliegt === false && mouseIsPressed) {//schiet
     kogelVliegt = true;
-    kogelX = spelerX;
-    kogelY = spelerY;
+    kogelX = plaatsAfvurenX;
+    kogelY = plaatsAfvurenY;
   }
 
-  if (kogelVliegt === true && doelwitY > spelerY) { // kogel vliegt
+  if (kogelVliegt === true && doelwitY > plaatsAfvurenY) { // kogel vliegt
     kogelY = kogelY + 1;
   }
 
-  if (kogelVliegt === true && doelwitY < spelerY) { // kogel vliegt
+  if (kogelVliegt === true && doelwitY < plaatsAfvurenY) { // kogel vliegt
     kogelY = kogelY - 1;
   }
 
-  if (kogelVliegt === true && doelwitX > spelerX) { // kogel vliegt
+  if (kogelVliegt === true && doelwitX > plaatsAfvurenX) { // kogel vliegt
     kogelX = kogelX + 1;
   }
 
-  if (kogelVliegt === true && doelwitX < spelerX) { // kogel vliegt
+  if (kogelVliegt === true && doelwitX < plaatsAfvurenX) { // kogel vliegt
     kogelX = kogelX - 1;
   }
 
