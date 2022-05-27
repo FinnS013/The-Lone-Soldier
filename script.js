@@ -29,6 +29,9 @@ var kogelX = 400; // x-positie van kogel
 var kogelY = 400; // y-positie van kogel
 var kogelVliegt = false;
 
+var doelwitX = 0;
+var doelwitY = 0;
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -57,15 +60,31 @@ var beweegAlles = function () {
   // vijand
 
   // kogel
-  if (kogelVliegt === false &&
-      keyIsDown(32)) {//schiet
+  if (mouseIsPressed && kogelVliegt === false) {
+    doelwitX = mouseX;
+    doelwitY = mouseY;
+  }
+  
+  if (kogelVliegt === false && mouseIsPressed) {//schiet
     kogelVliegt = true;
     kogelX = spelerX;
     kogelY = spelerY;
   }
 
-  if (kogelVliegt === true) { // kogel vliegt
+  if (kogelVliegt === true && doelwitY > spelerY) { // kogel vliegt
+    kogelY = kogelY + 1;
+  }
+
+  if (kogelVliegt === true && doelwitY < spelerY) { // kogel vliegt
     kogelY = kogelY - 1;
+  }
+
+  if (kogelVliegt === true && doelwitX > spelerX) { // kogel vliegt
+    kogelX = kogelX + 1;
+  }
+
+  if (kogelVliegt === true && doelwitX < spelerX) { // kogel vliegt
+    kogelX = kogelX - 1;
   }
 
   if (kogelVliegt === true && 
