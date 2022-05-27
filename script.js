@@ -34,8 +34,7 @@ var doelwitY = 0;
 var plaatsAfvurenX = 0;
 var plaatsAfvurenY = 0;
 
-var kogelSnelheidX = 0;
-var kogelSnelheidY = 0;
+var kogelSnelheid = 2;
 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
@@ -87,19 +86,19 @@ var beweegAlles = function () {
   var snelheidX = richtingX / correctieSnelheid;
   
   if (kogelVliegt === true && doelwitY > plaatsAfvurenY) { // kogel vliegt
-    kogelY = kogelY + 1 * (richtingY * snelheidY);
+    kogelY = kogelY + kogelSnelheid * (richtingY * snelheidY);
   }
 
   if (kogelVliegt === true && doelwitY < plaatsAfvurenY) { // kogel vliegt
-    kogelY = kogelY - 1 * (richtingY * snelheidY);
+    kogelY = kogelY - kogelSnelheid * (richtingY * snelheidY);
   }
 
   if (kogelVliegt === true && doelwitX > plaatsAfvurenX) { // kogel vliegt
-    kogelX = kogelX + 1 * (richtingX * snelheidX);
+    kogelX = kogelX + kogelSnelheid * (richtingX * snelheidX);
   }
 
   if (kogelVliegt === true && doelwitX < plaatsAfvurenX) { // kogel vliegt
-    kogelX = kogelX - 1 * (richtingX * snelheidX);
+    kogelX = kogelX - kogelSnelheid * (richtingX * snelheidX);
   }
 
   if (kogelVliegt === true && 
