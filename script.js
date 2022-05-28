@@ -93,8 +93,10 @@ var beweegAlles = function () {
     kogelX = kogelX + kogelSnelheid * snelheidX;
   }
 
-  if (kogelVliegt === true && 
-      kogelY < 0) { // kogel verdwijnt
+  if (kogelVliegt === true && kogelY < 0 || 
+      kogelVliegt === true && kogelY > 720 ||
+      kogelVliegt === true && kogelX < 0 ||
+      kogelVliegt === true && kogelX > 1280) { // kogel verdwijnt
     kogelVliegt = false;
   }
     
