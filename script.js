@@ -85,19 +85,11 @@ var beweegAlles = function () {
   var snelheidY = richtingY / correctieSnelheid;
   var snelheidX = richtingX / correctieSnelheid;
   
-  if (kogelVliegt === true && doelwitY > plaatsAfvurenY) { // kogel vliegt
+  if (kogelVliegt === true) { // kogel vliegt
     kogelY = kogelY + kogelSnelheid * snelheidY;
   }
 
-  if (kogelVliegt === true && doelwitY < plaatsAfvurenY) { // kogel vliegt
-    kogelY = kogelY + kogelSnelheid * snelheidY;
-  }
-
-  if (kogelVliegt === true && doelwitX > plaatsAfvurenX) { // kogel vliegt
-    kogelX = kogelX + kogelSnelheid * snelheidX;
-  }
-
-  if (kogelVliegt === true && doelwitX < plaatsAfvurenX) { // kogel vliegt
+  if (kogelVliegt === true) { // kogel vliegt
     kogelX = kogelX + kogelSnelheid * snelheidX;
   }
 
