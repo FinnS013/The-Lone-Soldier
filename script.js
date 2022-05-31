@@ -24,6 +24,8 @@ var spelerY = 600; // y-positie van speler
 
 var vijandX = 800; // x-positie van vijand
 var vijandY = 400; // y-positie van vijand
+var vijandBeweegt = false;
+var SnelheidVijand = 0.5;
 
 var kogelX = 400; // x-positie van kogel
 var kogelY = 400; // y-positie van kogel
@@ -62,7 +64,28 @@ var beweegAlles = function () {
   }
 
   // vijand
+  
+  if (vijandBeweegt === false ) {//beweeg
+    vijandBeweegt = true;
+  }
 
+  var richtingVijandY = spelerY - vijandY;
+  var richtingVijandX = spelerX - vijandX;
+
+  var correctieSnelheidVijand = Math.sqrt(((richtingVijandX * richtingVijandX) + (richtingVijandY * richtingVijandY))) / 1.4142
+  
+  var snelheidVijandY = richtingVijandY / correctieSnelheidVijand;
+  var snelheidVijandX = richtingVijandX / correctieSnelheidVijand;
+  
+  if (vijandBeweegt === true) { // kogel vliegt
+    vijandY = vijandY + SnelheidVijand * snelheidVijandY;
+  }
+
+  if (vijandBeweegt === true) { // kogel vliegt
+    vijandX = vijandX + SnelheidVijand * snelheidVijandX;
+  }
+
+  
   // kogel
   if (mouseIsPressed && kogelVliegt === false) {
     doelwitX = mouseX;
