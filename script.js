@@ -161,10 +161,66 @@ var tekenAlles = function () {
   rect(0,0, 1280,720);
   
   // vijand
-  fill("green");
-  rect(vijandX - 25, vijandY - 25, 50, 50);
-  fill("black");
-  ellipse(vijandX, vijandY, 10, 10);
+  //torso
+  fill(3, 6, 84);
+  rect(vijandX-65, vijandY+100, 30, 50); 
+  
+  //benen
+  //linker been
+  fill(255, 255, 255);
+  rect(vijandX-65, vijandY+150, 10, 50); //broek links(voor kijker)
+  fill(0, 0, 0);
+  rect(vijandX-65, vijandY+180, 10, 20); //schoen links(voor kijker)
+  
+  //rechter been
+  fill(252, 252, 255);
+  rect(vijandX-45, vijandY+150, 10, 50); //broek rechts(voor kijker)
+  fill(0, 0, 0);
+  rect(vijandX-45, vijandY+180, 10, 20); //schoen rechts(voor kijker)
+  
+  //rechter arm (schouder achter geweer)
+  fill(3, 6, 84);
+  rect(vijandX-35, vijandY+100, 10, 20); //mouw boven stuk (bluaw)
+  
+  //geweer
+  fill(117, 54, 54);
+  rect(vijandX-65, vijandY+110, 85, 8); //houten stuk
+  
+  fill(105, 101, 101);
+  rect(vijandX-40, vijandY+108, 75, 5); //loop
+  
+  fill(148, 138, 138);
+  rect(vijandX+30, vijandY+105, 30, 3);
+  
+  //arm
+  //linker arm (van kijker perspecftief)
+  fill(3, 6, 84);
+  rect(vijandX-75, vijandY+100, 10, 25); //mouw boven stuk (bluaw)
+  
+  fill(3, 6, 84);
+  rect(vijandX-75, vijandY+115, 40, 10); //mouw boven stuk onderarm(bluaw)
+  
+  fill(145, 16, 16);
+  rect(vijandX-45, vijandY+115, 10, 10); //mouw onderstuk (rood)
+  
+  fill(230, 200, 185);
+  rect(vijandX-35, vijandY+115, 10, 10); //hand
+  
+  //hoofd 
+  fill(230, 200, 185);
+  rect(vijandX -60, vijandY+80, 20, 20); //head
+  
+  //kraag rood
+  fill(145, 16, 16); 
+  rect(vijandX-61, vijandY+98, 22, 5); 
+  
+  //hoed
+  fill(0, 0, 0);
+  rect(vijandX-62, vijandY+50, 25, 30); //hoed
+  fill(201, 168, 0);
+  rect(vijandX+-55, vijandY+73, 10, 7);// plaat op hoed
+  fill(145, 16, 16);
+  rect(vijandX-40, vijandY+40, 6, 15); //veer op hoed
   
   // kogel
   fill("silver");
