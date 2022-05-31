@@ -163,64 +163,64 @@ var tekenAlles = function () {
   // vijand
   //torso
   fill(3, 6, 84);
-  rect(vijandX-65, vijandY+100, 30, 50); 
+  rect(vijandX, vijandY, 30, 50); 
   
   //benen
   //linker been
   fill(255, 255, 255);
-  rect(vijandX-65, vijandY+150, 10, 50); //broek links(voor kijker)
+  rect(vijandX, vijandY+50, 10, 50); //broek links(voor kijker)
   fill(0, 0, 0);
-  rect(vijandX-65, vijandY+180, 10, 20); //schoen links(voor kijker)
+  rect(vijandX, vijandY+80, 10, 20); //schoen links(voor kijker)
   
   //rechter been
   fill(252, 252, 255);
-  rect(vijandX-45, vijandY+150, 10, 50); //broek rechts(voor kijker)
+  rect(vijandX+20, vijandY+50, 10, 50); //broek rechts(voor kijker)
   fill(0, 0, 0);
-  rect(vijandX-45, vijandY+180, 10, 20); //schoen rechts(voor kijker)
+  rect(vijandX+20, vijandY+80, 10, 20); //schoen rechts(voor kijker)
   
   //rechter arm (schouder achter geweer)
   fill(3, 6, 84);
-  rect(vijandX-35, vijandY+100, 10, 20); //mouw boven stuk (bluaw)
+  rect(vijandX+30, vijandY, 10, 20); //mouw boven stuk (bluaw)
   
   //geweer
   fill(117, 54, 54);
-  rect(vijandX-65, vijandY+110, 85, 8); //houten stuk
+  rect(vijandX, vijandY+10, 85, 8); //houten stuk
   
   fill(105, 101, 101);
-  rect(vijandX-40, vijandY+108, 75, 5); //loop
+  rect(vijandX+25, vijandY+8, 75, 5); //loop
   
   fill(148, 138, 138);
-  rect(vijandX+30, vijandY+105, 30, 3);
+  rect(vijandX+95, vijandY+5, 30, 3);
   
   //arm
   //linker arm (van kijker perspecftief)
   fill(3, 6, 84);
-  rect(vijandX-75, vijandY+100, 10, 25); //mouw boven stuk (bluaw)
+  rect(vijandX-10, vijandY, 10, 25); //mouw boven stuk (bluaw)
   
   fill(3, 6, 84);
-  rect(vijandX-75, vijandY+115, 40, 10); //mouw boven stuk onderarm(bluaw)
+  rect(vijandX-10, vijandY+15, 40, 10); //mouw boven stuk onderarm(bluaw)
   
   fill(145, 16, 16);
-  rect(vijandX-45, vijandY+115, 10, 10); //mouw onderstuk (rood)
+  rect(vijandX+20, vijandY+15, 10, 10); //mouw onderstuk (rood)
   
   fill(230, 200, 185);
-  rect(vijandX-35, vijandY+115, 10, 10); //hand
+  rect(vijandX+30, vijandY+15, 10, 10); //hand
   
   //hoofd 
   fill(230, 200, 185);
-  rect(vijandX -60, vijandY+80, 20, 20); //head
+  rect(vijandX +5, vijandY-20, 20, 20); //head
   
   //kraag rood
   fill(145, 16, 16); 
-  rect(vijandX-61, vijandY+98, 22, 5); 
+  rect(vijandX+4, vijandY-2, 22, 5); 
   
   //hoed
   fill(0, 0, 0);
-  rect(vijandX-62, vijandY+50, 25, 30); //hoed
+  rect(vijandX+3, vijandY-50, 25, 30); //hoed
   fill(201, 168, 0);
-  rect(vijandX+-55, vijandY+73, 10, 7);// plaat op hoed
+  rect(vijandX+10, vijandY-27, 10, 7);// plaat op hoed
   fill(145, 16, 16);
-  rect(vijandX-40, vijandY+40, 6, 15); //veer op hoed
+  rect(vijandX+25, vijandY-60, 6, 15); //veer op hoed
   
   // kogel
   fill("silver");
