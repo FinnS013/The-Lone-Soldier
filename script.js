@@ -19,13 +19,13 @@ const KEY_A = 65;
 const KEY_S = 83;
 const KEY_D = 68;
 
-var spelerX = 600; // x-positie van speler
-var spelerY = 600; // y-positie van speler
+var spelerX = 400; // x-positie van speler
+var spelerY = 400; // y-positie van speler
 
-var vijandX = 800; // x-positie van vijand
+var vijandX = 900; // x-positie van vijand
 var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = false;
-var SnelheidVijand = 0;
+var SnelheidVijand = 0.5;
 
 var kogelX = 400; // x-positie van kogel
 var kogelY = 400; // y-positie van kogel
