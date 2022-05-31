@@ -229,68 +229,68 @@ var tekenAlles = function () {
   // speler
   //torso
   fill(181, 9, 9);
-  rect(spelerX-65, spelerY+100, 30, 50); //vest of torso
+  rect(spelerX, spelerY, 30, 50); //vest of torso
   
   //riem
   fill(255, 255, 255);
-  rect(spelerX-65, spelerY+135, 30, 5 );
+  rect(spelerX, spelerY+35, 30, 5 );
   fill(201, 168, 0);
-  rect(spelerX-52, spelerY+135, 5, 5); //gesp
+  rect(spelerX+13, spelerY+35, 5, 5); //gesp
   
   //benen
   //linker been
   fill(12, 15, 138);
-  rect(spelerX-65, spelerY+150, 10, 50); //broek
+  rect(spelerX, spelerY+50, 10, 50); //broek
   fill(0, 0, 0);
-  rect(spelerX-65, spelerY+190, 10, 10); //schoen
+  rect(spelerX, spelerY+90, 10, 10); //schoen
   
   //rechter been
   fill(12, 15, 138);
-  rect(spelerX-45, spelerY+150, 10, 50); //broek
+  rect(spelerX+20, spelerY+50, 10, 50); //broek
   fill(0, 0, 0);
-  rect(spelerX-45, spelerY+190, 10, 10); //schoen
+  rect(spelerX+20, spelerY+90, 10, 10); //schoen
   
   //rechter arm (schouder achter geweer)
   fill(181, 9, 9);
-  rect(spelerX-35, spelerY+100, 10, 20); //mouw boven stuk (rood)
+  rect(spelerX+30, spelerY, 10, 20); //mouw boven stuk (rood)
   
   //geweer
   fill(117, 54, 54);
-  rect(spelerX-65, spelerY+110, 85, 8); //houten stuk
+  rect(spelerX, spelerY+10, 85, 8); //houten stuk
   
   fill(105, 101, 101);
-  rect(spelerX-40, spelerY+108, 75, 5); //loop
+  rect(spelerX+25, spelerY+8, 75, 5); //loop
   
   fill(148, 138, 138);
-  rect(spelerX+30, spelerY+105, 30, 3);
+  rect(spelerX+95, spelerY+5, 30, 3);
   
   //arm
   //linker arm (van user perspecftief)
   fill(181, 9, 9);
-  rect(spelerX-75, spelerY+100, 10, 25); //mouw boven stuk (rood)
+  rect(spelerX-10, spelerY, 10, 25); //mouw boven stuk (rood)
   
   fill(181, 9, 9);
-  rect(spelerX-75, spelerY+115, 40, 10); //mouw boven stuk onderarm(rood)
+  rect(spelerX-10, spelerY+15, 40, 10); //mouw boven stuk onderarm(rood)
   
   fill(12, 15, 138);
-  rect(spelerX-45, spelerY+115, 10, 10); //mouw onderstuk (blauw)
+  rect(spelerX+20, spelerY+15, 10, 10); //mouw onderstuk (blauw)
   
   fill(230, 200, 185);
-  rect(spelerX-35, spelerY+115, 10, 10); //hand
+  rect(spelerX+30, spelerY+15, 10, 10); //hand
   
   //hoofd
   fill(230, 200, 185);
-  rect(spelerX -60, spelerY+80, 20, 20); //head
+  rect(spelerX +5, spelerY-20, 20, 20); //head
   
   //kraag blauw
   fill(12, 15, 138);
-  rect(spelerX-61, spelerY+98, 22, 5);
+  rect(spelerX+4, spelerY-2, 22, 5);
   
   //hoed
   fill(0, 0, 0);
-  rect(spelerX-62, spelerY+50, 25, 30); //hoed
+  rect(spelerX+3, spelerY-50, 25, 30); //hoed
   fill(192, 192, 192);
-  rect(spelerX+-55, spelerY+73, 10, 7);// plaat op hoed
+  rect(spelerX+10, spelerY-27, 10, 7);// plaat op hoed
 
   // punten en health
 
