@@ -25,7 +25,7 @@ var spelerY = 600; // y-positie van speler
 var vijandX = 800; // x-positie van vijand
 var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = false;
-var SnelheidVijand = 0.5;
+var SnelheidVijand = 0;
 
 var kogelX = 400; // x-positie van kogel
 var kogelY = 400; // y-positie van kogel
@@ -171,10 +171,70 @@ var tekenAlles = function () {
   ellipse(kogelX, kogelY, 20, 20);
   
   // speler
-  fill("white");
-  rect(spelerX - 25, spelerY - 25, 50, 50);
-  fill("black");
-  ellipse(spelerX, spelerY, 10, 10);
+  //torso
+  fill(181, 9, 9);
+  rect(spelerX-65, spelerY+100, 30, 50); //vest of torso
+  
+  //riem
+  fill(255, 255, 255);
+  rect(spelerX-65, spelerY+135, 30, 5 );
+  fill(201, 168, 0);
+  rect(spelerX-52, spelerY+135, 5, 5); //gesp
+  
+  //benen
+  //linker been
+  fill(12, 15, 138);
+  rect(spelerX-65, spelerY+150, 10, 50); //broek
+  fill(0, 0, 0);
+  rect(spelerX-65, spelerY+190, 10, 10); //schoen
+  
+  //rechter been
+  fill(12, 15, 138);
+  rect(spelerX-45, spelerY+150, 10, 50); //broek
+  fill(0, 0, 0);
+  rect(spelerX-45, spelerY+190, 10, 10); //schoen
+  
+  //rechter arm (schouder achter geweer)
+  fill(181, 9, 9);
+  rect(spelerX-35, spelerY+100, 10, 20); //mouw boven stuk (rood)
+  
+  //geweer
+  fill(117, 54, 54);
+  rect(spelerX-65, spelerY+110, 85, 8); //houten stuk
+  
+  fill(105, 101, 101);
+  rect(spelerX-40, spelerY+108, 75, 5); //loop
+  
+  fill(148, 138, 138);
+  rect(spelerX+30, spelerY+105, 30, 3);
+  
+  //arm
+  //linker arm (van user perspecftief)
+  fill(181, 9, 9);
+  rect(spelerX-75, spelerY+100, 10, 25); //mouw boven stuk (rood)
+  
+  fill(181, 9, 9);
+  rect(spelerX-75, spelerY+115, 40, 10); //mouw boven stuk onderarm(rood)
+  
+  fill(12, 15, 138);
+  rect(spelerX-45, spelerY+115, 10, 10); //mouw onderstuk (blauw)
+  
+  fill(230, 200, 185);
+  rect(spelerX-35, spelerY+115, 10, 10); //hand
+  
+  //hoofd
+  fill(230, 200, 185);
+  rect(spelerX -60, spelerY+80, 20, 20); //head
+  
+  //kraag blauw
+  fill(12, 15, 138);
+  rect(spelerX-61, spelerY+98, 22, 5);
+  
+  //hoed
+  fill(0, 0, 0);
+  rect(spelerX-62, spelerY+50, 25, 30); //hoed
+  fill(192, 192, 192);
+  rect(spelerX+-55, spelerY+73, 10, 7);// plaat op hoed
 
   // punten en health
 
