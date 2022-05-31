@@ -347,7 +347,7 @@ function draw() {
     textSize(100);
     fill("white");
     text("GAME OVER", 300, 350)
-    text("Press Enter for new game", 150, 450)
+    text("Press Enter for new game", 100, 450)
   }
 
   if (keyIsDown(KEY_ENTER)) {
