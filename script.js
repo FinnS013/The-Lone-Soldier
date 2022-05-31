@@ -18,10 +18,15 @@ const KEY_W = 87;
 const KEY_A = 65;
 const KEY_S = 83;
 const KEY_D = 68;
+const KEY_ENTER = 13;
 
+var startSpelerX = 400;
+var startSpelerY = 400;
 var spelerX = 400; // x-positie van speler
 var spelerY = 400; // y-positie van speler
 
+var startVijandX = 900;
+var startVijandY = 400;
 var vijandX = 900; // x-positie van vijand
 var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = false;
@@ -342,6 +347,14 @@ function draw() {
     textSize(100);
     fill("white");
     text("GAME OVER", 300, 350)
-    text("Press ... for new game", 150, 450)
+    text("Press Enter for new game", 150, 450)
+  }
+
+  if (keyIsDown(KEY_ENTER)) {
+    spelStatus = SPELEN;
+    spelerX = startSpelerX;
+    spelerY = startSpelerY;
+    vijandX = startVijandX;
+    vijandY = startVijandY;
   }
 }
