@@ -23,8 +23,8 @@ Basis: uitleg, spelen, afgaan en punten
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
 - [ ] 4. *(pas de volgende stappen in de planning zelf aan)*
 - [X] 5. teken je tegenspeler (vijanden of wild dier)
-- [ ] 6. kogel (als die in je spel zit)
-- [ ] 7. beweeg de tegenspeler
+- [x] 6. kogel (als die in je spel zit)
+- [x] 7. beweeg de tegenspeler
 - [ ] x. zet punten op het scherm(tegen spelers moeten verslagen worden) 
 - [ ] x. zorg dat je punten kunt scoren(vijanden kunnen dood gaan)
 - [X] x. zorg dat je af kunt(vijand hit je)
