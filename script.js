@@ -156,7 +156,7 @@ var verwerkBotsing = function () {
      }
   
   // update punten en health
-  score = score + 0.02;
+  score = score + (1 / 60);
 };
 
 /**
