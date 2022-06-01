@@ -32,7 +32,7 @@ var startVijandY = 400;
 var vijandX = 900; // x-positie van vijand
 var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = false;
-var SnelheidVijand = 0;
+var SnelheidVijand = 0.5;
 
 var kogelX = 400; // x-positie van kogel
 var kogelY = 400; // y-positie van kogel
