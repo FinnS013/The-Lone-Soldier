@@ -20,6 +20,8 @@ const KEY_S = 83;
 const KEY_D = 68;
 const KEY_ENTER = 13;
 
+var score = 0;
+
 var startSpelerX = 400;
 var startSpelerY = 400;
 var spelerX = 400; // x-positie van speler
@@ -154,7 +156,7 @@ var verwerkBotsing = function () {
      }
   
   // update punten en health
-
+  score = score + 0.02;
 };
 
 /**
@@ -298,7 +300,8 @@ var tekenAlles = function () {
   rect(spelerX+10, spelerY-27, 10, 7);// plaat op hoed
 
   // punten en health
-
+  textSize(25);
+  text(Math.trunc(score), 10, 30);
 };
 
 /**
