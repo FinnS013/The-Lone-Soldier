@@ -30,7 +30,7 @@ var startVijandY = 400;
 var vijandX = 900; // x-positie van vijand
 var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = false;
-var SnelheidVijand = 0.5;
+var SnelheidVijand = 0;
 
 var kogelX = 400; // x-positie van kogel
 var kogelY = 400; // y-positie van kogel
@@ -139,8 +139,8 @@ var verwerkBotsing = function () {
   // botsing speler tegen vijand
   if (spelerX - vijandX < 50 &&
       spelerX - vijandX > -50 &&
-      spelerY - vijandY < 50 &&
-      spelerY - vijandY > -50) {
+      spelerY - vijandY < 130 &&
+      spelerY - vijandY > -120) {
       console.log("Botsing");
       spelStatus = GAMEOVER;
      }
@@ -148,8 +148,8 @@ var verwerkBotsing = function () {
   // botsing kogel tegen vijand
   if (kogelX - vijandX < 50 &&
       kogelX - vijandX > -50 &&
-      kogelY - vijandY < 50 &&
-      kogelY - vijandY > -50) {
+      kogelY - vijandY < 130 &&
+      kogelY - vijandY > -120) {
       console.log("kogel raak");
      }
   
