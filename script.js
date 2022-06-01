@@ -52,19 +52,19 @@ var kogelSnelheid = 1;
  */
 var beweegAlles = function () {
   // speler
-  if (keyIsDown(KEY_W)) {
+  if (keyIsDown(KEY_W) && spelerY - 50 > 0) {
     spelerY = spelerY - 1;
   }
 
-  if (keyIsDown(KEY_S)) {
+  if (keyIsDown(KEY_S) && spelerY + 100 < 720) {
     spelerY = spelerY + 1;
   }
 
-  if (keyIsDown(KEY_A)) {
+  if (keyIsDown(KEY_A) && spelerX - 10 > 0) {
     spelerX = spelerX - 1;
   }
 
-  if (keyIsDown(KEY_D)) {
+  if (keyIsDown(KEY_D) && spelerX + 45 < 1280) {
     spelerX = spelerX + 1;
   }
 
