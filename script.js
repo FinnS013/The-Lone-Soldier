@@ -349,8 +349,10 @@ function draw() {
     rect(0, 0, 1280, 720)
     textSize(100);
     fill("white");
-    text("GAME OVER", 300, 350)
-    text("Press Enter for new game", 100, 450)
+    text("GAME OVER", 300, 200);
+    text("Your score is" ,300, 300);
+    text(Math.trunc(score), 550, 400);
+    text("Press Enter for new game", 100, 500);
   }
 
   if (keyIsDown(KEY_ENTER)) {
