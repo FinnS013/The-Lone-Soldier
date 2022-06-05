@@ -20,6 +20,7 @@ const KEY_S = 83;
 const KEY_D = 68;
 const KEY_ENTER = 13;
 
+var startScore = 0;
 var score = 0;
 
 var startSpelerX = 400;
@@ -520,5 +521,6 @@ function draw() {
     spelerY = startSpelerY;
     vijandX = startVijandX;
     vijandY = startVijandY;
+    score = startScore;
   }
 }
