@@ -34,6 +34,8 @@ var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = false;
 var SnelheidVijand = 0.5;
 
+var startKogelX = -10;
+var startKogelY = 0;
 var kogelX = 400; // x-positie van kogel
 var kogelY = 400; // y-positie van kogel
 var kogelVliegt = false;
@@ -289,7 +291,12 @@ var verwerkBotsing = function () {
       kogelY - vijandY < 130 &&
       kogelY - vijandY > -120) {
       console.log("kogel raak");
-     }
+      vijandY = startVijandY;
+      vijandX = startVijandX + 450;
+      kogelVliegt = false;
+      kogelX = startKogelX;
+      kogelY = startKogelY;
+  }
   
   // update punten en health
   score = score + (1 / 60);
