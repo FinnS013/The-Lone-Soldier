@@ -31,7 +31,7 @@ var startVijandX = 900;
 var startVijandY = 400;
 var vijandX = 900; // x-positie van vijand
 var vijandY = 400; // y-positie van vijand
-var vijandBeweegt = false;
+var vijandBeweegt = true;
 var SnelheidVijand = 0.5;
 
 var startKogelX = -10;
@@ -341,11 +341,6 @@ var beweegAlles = function () {
   }
 
   // vijand
-  
-  if (vijandBeweegt === false ) {//beweeg
-    vijandBeweegt = true;
-  }
-
   var richtingVijandY = spelerY - vijandY;
   var richtingVijandX = spelerX - vijandX;
 
