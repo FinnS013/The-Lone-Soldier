@@ -455,8 +455,13 @@ var tekenAlles = function () {
   ellipse(kogelX, kogelY, 20, 20);
   
   // speler
-  speler();
-
+  if (mouseX < spelerX) {
+    spelerKijktLinks();
+  }
+  else {
+    spelerKijktRechts();
+  }
+  
   // punten en health
   textSize(25);
   text(Math.trunc(score), 10, 30);
