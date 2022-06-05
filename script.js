@@ -55,7 +55,7 @@ var kogelSnelheid = 1;
  * functies voor in de tekenAlles functie
  */
 
-var vijand = function() {
+var vijandKijktRechts = function() {
   //torso
   fill(3, 6, 84);
   rect(vijandX, vijandY, 30, 50); 
@@ -117,6 +117,71 @@ var vijand = function() {
   fill(145, 16, 16);
   rect(vijandX+25, vijandY-60, 6, 15); //veer op hoed
 }
+
+
+var vijandKijktLinks = function() {
+  //torso
+  fill(3, 6, 84);
+  rect(vijandX, vijandY, 30, 50); 
+  
+  //benen
+  //linker been
+  fill(255, 255, 255);
+  rect(vijandX, vijandY+50, 10, 50); //broek links(voor kijker)
+  fill(0, 0, 0);
+  rect(vijandX, vijandY+80, 10, 20); //schoen links(voor kijker)
+  
+  //rechter been
+  fill(252, 252, 255);
+  rect(vijandX+20, vijandY+50, 10, 50); //broek rechts(voor kijker)
+  fill(0, 0, 0);
+  rect(vijandX+20, vijandY+80, 10, 20); //schoen rechts(voor kijker)
+  
+  //rechter arm (schouder achter geweer)
+  fill(3, 6, 84);
+  rect(vijandX-10, vijandY, 10, 20); //mouw boven stuk (bluaw)
+  
+  //geweer
+  fill(117, 54, 54);
+  rect(vijandX+30, vijandY+10, -85, 8); //houten stuk
+  
+  fill(105, 101, 101);
+  rect(vijandX, vijandY+8, -75, 5); //loop
+  
+  fill(148, 138, 138);
+  rect(vijandX-70, vijandY+5, -30, 3);
+  
+  //arm
+  //linker arm (van kijker perspecftief)
+  fill(3, 6, 84);
+  rect(vijandX+30, vijandY, 10, 25); //mouw boven stuk (bluaw)
+  
+  fill(3, 6, 84);
+  rect(vijandX+30, vijandY+15, 0, 10); //mouw boven stuk onderarm(bluaw)
+  
+  fill(145, 16, 16);
+  rect(vijandX, vijandY+15, 10, 10); //mouw onderstuk (rood)
+  
+  fill(230, 200, 185);
+  rect(vijandX-10, vijandY+15, 10, 10); //hand
+  
+  //hoofd 
+  fill(230, 200, 185);
+  rect(vijandX +5, vijandY-20, 20, 20); //head
+  
+  //kraag rood
+  fill(145, 16, 16); 
+  rect(vijandX+4, vijandY-2, 22, 5); 
+  
+  //hoed
+  fill(0, 0, 0);
+  rect(vijandX+3, vijandY-50, 25, 30); //hoed
+  fill(201, 168, 0);
+  rect(vijandX+10, vijandY-27, 10, 7);// plaat op hoed
+  fill(145, 16, 16);
+  rect(vijandX+25, vijandY-60, 6, 15); //veer op hoed
+}
+
 
 
 var speler = function() {
@@ -311,7 +376,7 @@ var tekenAlles = function () {
   rect(0,0, 1280,720);
   
   // vijand
-  vijand();
+  vijandKijktRechts();
   
   // kogel
   fill("silver");
