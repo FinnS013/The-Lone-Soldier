@@ -376,7 +376,12 @@ var tekenAlles = function () {
   rect(0,0, 1280,720);
   
   // vijand
-  vijandKijktRechts();
+  if (spelerX < vijandX) {
+    vijandKijktLinks();
+  }
+  else {
+    vijandKijktRechts();
+  }
   
   // kogel
   fill("silver");
