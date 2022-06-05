@@ -36,8 +36,8 @@ var SnelheidVijand = 0.5;
 
 var startKogelX = -10;
 var startKogelY = 0;
-var kogelX = 400; // x-positie van kogel
-var kogelY = 400; // y-positie van kogel
+var kogelX = -10; // x-positie van kogel
+var kogelY = 0; // y-positie van kogel
 var kogelVliegt = false;
 
 var doelwitX = 0;
