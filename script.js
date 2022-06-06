@@ -51,6 +51,11 @@ var kogelSnelheid = 1;
 var aantalVijand = [];
 var vijandX = [];
 var vijandY = [];
+var richtingVijandY = [];
+var richtingVijandX = [];
+var correctieSnelheidVijand = [];
+var snelheidVijandY = [];
+var snelheidVijandX = [];
 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
@@ -59,134 +64,134 @@ var vijandY = [];
 /**
  * functies voor in de tekenAlles functie
  */
-
-var vijandKijktRechts = function() {
-  //torso
-  fill(3, 6, 84);
-  rect(vijandX[i], vijandY[i], 30, 50); 
+for (var i = 0; i < aantalVijand; i ++) {
+  var vijandKijktRechts = function() {
+    //torso
+    fill(3, 6, 84);
+    rect(vijandX[i], vijandY[i], 30, 50); 
+    
+    //benen
+    //linker been
+    fill(255, 255, 255);
+    rect(vijandX[i], vijandY[i]+50, 10, 50); //broek links(voor kijker)
+    fill(0, 0, 0);
+    rect(vijandX[i], vijandY[i]+80, 10, 20); //schoen links(voor kijker)
+    
+    //rechter been
+    fill(252, 252, 255);
+    rect(vijandX[i]+20, vijandY[i]+50, 10, 50); //broek rechts(voor kijker)
+    fill(0, 0, 0);
+    rect(vijandX[i]+20, vijandY[i]+80, 10, 20); //schoen rechts(voor kijker)
+    
+    //rechter arm (schouder achter geweer)
+    fill(3, 6, 84);
+    rect(vijandX[i]+30, vijandY[i], 10, 20); //mouw boven stuk (bluaw)
+    
+    //geweer
+    fill(117, 54, 54);
+    rect(vijandX[i], vijandY[i]+10, 85, 8); //houten stuk
+    
+    fill(105, 101, 101);
+    rect(vijandX[i]+25, vijandY[i]+8, 75, 5); //loop
+    
+    fill(148, 138, 138);
+    rect(vijandX[i]+95, vijandY[i]+5, 30, 3);
+    
+    //arm
+    //linker arm (van kijker perspecftief)
+    fill(3, 6, 84);
+    rect(vijandX[i]-10, vijandY[i], 10, 25); //mouw boven stuk (bluaw)
+    
+    fill(3, 6, 84);
+    rect(vijandX[i]-10, vijandY[i]+15, 40, 10); //mouw boven stuk onderarm(bluaw)
+    
+    fill(145, 16, 16);
+    rect(vijandX[i]+20, vijandY[i]+15, 10, 10); //mouw onderstuk (rood)
+    
+    fill(230, 200, 185);
+    rect(vijandX[i]+30, vijandY[i]+15, 10, 10); //hand
+    
+    //hoofd 
+    fill(230, 200, 185);
+    rect(vijandX[i] +5, vijandY[i]-20, 20, 20); //head
+    
+    //kraag rood
+    fill(145, 16, 16); 
+    rect(vijandX[i]+4, vijandY[i]-2, 22, 5); 
+    
+    //hoed
+    fill(0, 0, 0);
+    rect(vijandX[i]+3, vijandY[i]-50, 25, 30); //hoed
+    fill(201, 168, 0);
+    rect(vijandX[i]+10, vijandY[i]-27, 10, 7);// plaat op hoed
+    fill(145, 16, 16);
+    rect(vijandX[i]+25, vijandY[i]-60, 6, 15); //veer op hoed
+  }
   
-  //benen
-  //linker been
-  fill(255, 255, 255);
-  rect(vijandX[i], vijandY[i]+50, 10, 50); //broek links(voor kijker)
-  fill(0, 0, 0);
-  rect(vijandX[i], vijandY[i]+80, 10, 20); //schoen links(voor kijker)
   
-  //rechter been
-  fill(252, 252, 255);
-  rect(vijandX[i]+20, vijandY[i]+50, 10, 50); //broek rechts(voor kijker)
-  fill(0, 0, 0);
-  rect(vijandX[i]+20, vijandY[i]+80, 10, 20); //schoen rechts(voor kijker)
-  
-  //rechter arm (schouder achter geweer)
-  fill(3, 6, 84);
-  rect(vijandX[i]+30, vijandY[i], 10, 20); //mouw boven stuk (bluaw)
-  
-  //geweer
-  fill(117, 54, 54);
-  rect(vijandX[i], vijandY[i]+10, 85, 8); //houten stuk
-  
-  fill(105, 101, 101);
-  rect(vijandX[i]+25, vijandY[i]+8, 75, 5); //loop
-  
-  fill(148, 138, 138);
-  rect(vijandX[i]+95, vijandY[i]+5, 30, 3);
-  
-  //arm
-  //linker arm (van kijker perspecftief)
-  fill(3, 6, 84);
-  rect(vijandX[i]-10, vijandY[i], 10, 25); //mouw boven stuk (bluaw)
-  
-  fill(3, 6, 84);
-  rect(vijandX[i]-10, vijandY[i]+15, 40, 10); //mouw boven stuk onderarm(bluaw)
-  
-  fill(145, 16, 16);
-  rect(vijandX[i]+20, vijandY[i]+15, 10, 10); //mouw onderstuk (rood)
-  
-  fill(230, 200, 185);
-  rect(vijandX[i]+30, vijandY[i]+15, 10, 10); //hand
-  
-  //hoofd 
-  fill(230, 200, 185);
-  rect(vijandX[i] +5, vijandY[i]-20, 20, 20); //head
-  
-  //kraag rood
-  fill(145, 16, 16); 
-  rect(vijandX[i]+4, vijandY[i]-2, 22, 5); 
-  
-  //hoed
-  fill(0, 0, 0);
-  rect(vijandX[i]+3, vijandY[i]-50, 25, 30); //hoed
-  fill(201, 168, 0);
-  rect(vijandX[i]+10, vijandY[i]-27, 10, 7);// plaat op hoed
-  fill(145, 16, 16);
-  rect(vijandX[i]+25, vijandY[i]-60, 6, 15); //veer op hoed
+  var vijandKijktLinks = function() {
+    //torso
+    fill(3, 6, 84);
+    rect(vijandX[i], vijandY[i], 30, 50); 
+    
+    //benen
+    //linker been
+    fill(255, 255, 255);
+    rect(vijandX[i], vijandY[i]+50, 10, 50); //broek links(voor kijker)
+    fill(0, 0, 0);
+    rect(vijandX[i], vijandY[i]+80, 10, 20); //schoen links(voor kijker)
+    
+    //rechter been
+    fill(252, 252, 255);
+    rect(vijandX[i]+20, vijandY[i]+50, 10, 50); //broek rechts(voor kijker)
+    fill(0, 0, 0);
+    rect(vijandX[i]+20, vijandY[i]+80, 10, 20); //schoen rechts(voor kijker)
+    
+    //rechter arm (schouder achter geweer)
+    fill(3, 6, 84);
+    rect(vijandX[i]-10, vijandY[i], 10, 20); //mouw boven stuk (bluaw)
+    
+    //geweer
+    fill(117, 54, 54);
+    rect(vijandX[i]+30, vijandY[i]+10, -85, 8); //houten stuk
+    
+    fill(105, 101, 101);
+    rect(vijandX[i], vijandY[i]+8, -75, 5); //loop
+    
+    fill(148, 138, 138);
+    rect(vijandX[i]-70, vijandY[i]+5, -30, 3);
+    
+    //arm
+    //linker arm (van kijker perspecftief)
+    fill(3, 6, 84);
+    rect(vijandX[i]+30, vijandY[i], 10, 25); //mouw boven stuk (bluaw)
+    
+    fill(3, 6, 84);
+    rect(vijandX[i]+30, vijandY[i]+15, -20, 10); //mouw boven stuk onderarm(bluaw)
+    
+    fill(145, 16, 16);
+    rect(vijandX[i], vijandY[i]+15, 10, 10); //mouw onderstuk (rood)
+    
+    fill(230, 200, 185);
+    rect(vijandX[i]-10, vijandY[i]+15, 10, 10); //hand
+    
+    //hoofd 
+    fill(230, 200, 185);
+    rect(vijandX[i] +5, vijandY[i]-20, 20, 20); //head
+    
+    //kraag rood
+    fill(145, 16, 16); 
+    rect(vijandX[i]+4, vijandY[i]-2, 22, 5); 
+    
+    //hoed
+    fill(0, 0, 0);
+    rect(vijandX[i]+3, vijandY[i]-50, 25, 30); //hoed
+    fill(201, 168, 0);
+    rect(vijandX[i]+10, vijandY[i]-27, 10, 7);// plaat op hoed
+    fill(145, 16, 16);
+    rect(vijandX[i]+25, vijandY[i]-60, 6, 15); //veer op hoed
+  }
 }
-
-
-var vijandKijktLinks = function() {
-  //torso
-  fill(3, 6, 84);
-  rect(vijandX[i], vijandY[i], 30, 50); 
-  
-  //benen
-  //linker been
-  fill(255, 255, 255);
-  rect(vijandX[i], vijandY[i]+50, 10, 50); //broek links(voor kijker)
-  fill(0, 0, 0);
-  rect(vijandX[i], vijandY[i]+80, 10, 20); //schoen links(voor kijker)
-  
-  //rechter been
-  fill(252, 252, 255);
-  rect(vijandX[i]+20, vijandY[i]+50, 10, 50); //broek rechts(voor kijker)
-  fill(0, 0, 0);
-  rect(vijandX[i]+20, vijandY[i]+80, 10, 20); //schoen rechts(voor kijker)
-  
-  //rechter arm (schouder achter geweer)
-  fill(3, 6, 84);
-  rect(vijandX[i]-10, vijandY[i], 10, 20); //mouw boven stuk (bluaw)
-  
-  //geweer
-  fill(117, 54, 54);
-  rect(vijandX[i]+30, vijandY[i]+10, -85, 8); //houten stuk
-  
-  fill(105, 101, 101);
-  rect(vijandX[i], vijandY[i]+8, -75, 5); //loop
-  
-  fill(148, 138, 138);
-  rect(vijandX[i]-70, vijandY[i]+5, -30, 3);
-  
-  //arm
-  //linker arm (van kijker perspecftief)
-  fill(3, 6, 84);
-  rect(vijandX[i]+30, vijandY[i], 10, 25); //mouw boven stuk (bluaw)
-  
-  fill(3, 6, 84);
-  rect(vijandX[i]+30, vijandY[i]+15, -20, 10); //mouw boven stuk onderarm(bluaw)
-  
-  fill(145, 16, 16);
-  rect(vijandX[i], vijandY[i]+15, 10, 10); //mouw onderstuk (rood)
-  
-  fill(230, 200, 185);
-  rect(vijandX[i]-10, vijandY[i]+15, 10, 10); //hand
-  
-  //hoofd 
-  fill(230, 200, 185);
-  rect(vijandX[i] +5, vijandY[i]-20, 20, 20); //head
-  
-  //kraag rood
-  fill(145, 16, 16); 
-  rect(vijandX[i]+4, vijandY[i]-2, 22, 5); 
-  
-  //hoed
-  fill(0, 0, 0);
-  rect(vijandX[i]+3, vijandY[i]-50, 25, 30); //hoed
-  fill(201, 168, 0);
-  rect(vijandX[i]+10, vijandY[i]-27, 10, 7);// plaat op hoed
-  fill(145, 16, 16);
-  rect(vijandX[i]+25, vijandY[i]-60, 6, 15); //veer op hoed
-}
-
 
 
 var spelerKijktRechts = function() {
@@ -347,23 +352,23 @@ var beweegAlles = function () {
 
   // vijand
   SnelheidVijand = 0.5 + (score / 50)
+  for (var i = 0; i < aantalVijand; i ++) {
+    richtingVijandY[i] = spelerY - vijandY[i];
+    richtingVijandX[i] = spelerX - vijandX[i];
   
-  var richtingVijandY = spelerY - vijandY;
-  var richtingVijandX = spelerX - vijandX;
-
-  var correctieSnelheidVijand = Math.sqrt(((richtingVijandX * richtingVijandX) + (richtingVijandY * richtingVijandY))) / 1.4142
+    correctieSnelheidVijand[i] = Math.sqrt(((richtingVijandX[i] * richtingVijandX[i]) + (richtingVijandY[i] * richtingVijandY[i]))) / 1.4142
+    
+    snelheidVijandY[i] = richtingVijandY[i] / correctieSnelheidVijand[i];
+    snelheidVijandX[i] = richtingVijandX[i] / correctieSnelheidVijand[i];
+    
+    if (vijandBeweegt === true) { // vijand beweegt
+      vijandY[i] = vijandY[i] + SnelheidVijand * snelheidVijandY[i];
+    }
   
-  var snelheidVijandY = richtingVijandY / correctieSnelheidVijand;
-  var snelheidVijandX = richtingVijandX / correctieSnelheidVijand;
-  
-  if (vijandBeweegt === true) { // vijand beweegt
-    vijandY = vijandY + SnelheidVijand * snelheidVijandY;
+    if (vijandBeweegt === true) { // vijand beweegt
+      vijandX[i] = vijandX[i] + SnelheidVijand * snelheidVijandX[i];
+    }
   }
-
-  if (vijandBeweegt === true) { // vijand beweegt
-    vijandX = vijandX + SnelheidVijand * snelheidVijandX;
-  }
-
   
   // kogel
   if (mouseIsPressed && kogelVliegt === false) {
@@ -410,28 +415,29 @@ var beweegAlles = function () {
  * Updatet globale variabelen punten en health
  */
 var verwerkBotsing = function () {
-  // botsing speler tegen vijand
-  if (spelerX - vijandX < 50 &&
-      spelerX - vijandX > -50 &&
-      spelerY - vijandY < 130 &&
-      spelerY - vijandY > -120) {
-      console.log("Botsing");
-      spelStatus = GAMEOVER;
-     }
-  
-  // botsing kogel tegen vijand
-  if (kogelX - vijandX < 50 &&
-      kogelX - vijandX > -50 &&
-      kogelY - vijandY < 130 &&
-      kogelY - vijandY > -120) {
-      console.log("kogel raak");
-      vijandY = startVijandY;
-      vijandX = startVijandX + 450;
-      kogelVliegt = false;
-      kogelX = startKogelX;
-      kogelY = startKogelY;
+  for (var i = 0; i < aantalVijand; i ++) {
+    // botsing speler tegen vijand
+    if (spelerX - vijandX[i] < 50 &&
+        spelerX - vijandX[i] > -50 &&
+        spelerY - vijandY[i] < 130 &&
+        spelerY - vijandY[i] > -120) {
+        console.log("Botsing");
+        spelStatus = GAMEOVER;
+       }
+    
+    // botsing kogel tegen vijand
+    if (kogelX - vijandX[i] < 50 &&
+        kogelX - vijandX[i] > -50 &&
+        kogelY - vijandY[i] < 130 &&
+        kogelY - vijandY[i] > -120) {
+        console.log("kogel raak");
+        vijandY[i] = startVijandY;
+        vijandX[i] = startVijandX + 450;
+        kogelVliegt = false;
+        kogelX = startKogelX;
+        kogelY = startKogelY;
+    }
   }
-  
   // update punten en health
   score = score + (1 / 60);
 };
@@ -527,8 +533,8 @@ function draw() {
     spelStatus = SPELEN;
     spelerX = startSpelerX;
     spelerY = startSpelerY;
-    vijandX = startVijandX;
-    vijandY = startVijandY;
+    vijandX[i] = startVijandX;
+    vijandY[i] = startVijandY;
     score = startScore;
   }
 }
