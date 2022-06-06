@@ -342,6 +342,8 @@ var beweegAlles = function () {
   }
 
   // vijand
+  SnelheidVijand = 0.5 + (score / 50)
+  
   var richtingVijandY = spelerY - vijandY;
   var richtingVijandX = spelerX - vijandX;
 
@@ -350,11 +352,11 @@ var beweegAlles = function () {
   var snelheidVijandY = richtingVijandY / correctieSnelheidVijand;
   var snelheidVijandX = richtingVijandX / correctieSnelheidVijand;
   
-  if (vijandBeweegt === true) { // kogel vliegt
+  if (vijandBeweegt === true) { // vijand beweegt
     vijandY = vijandY + SnelheidVijand * snelheidVijandY;
   }
 
-  if (vijandBeweegt === true) { // kogel vliegt
+  if (vijandBeweegt === true) { // vijand beweegt
     vijandX = vijandX + SnelheidVijand * snelheidVijandX;
   }
 
