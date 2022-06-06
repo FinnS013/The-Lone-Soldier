@@ -48,7 +48,7 @@ var plaatsAfvurenY = 0;
 
 var kogelSnelheid = 1;
 
-var aantalVijand = [];
+var aantalVijand = 3;
 var vijandX = [];
 var vijandY = [];
 var richtingVijandY = [];
@@ -451,7 +451,7 @@ var tekenAlles = function () {
   rect(0,0, 1280,720);
   
   // vijand
-  for (var i = 0; i < aantalVijand.length; i ++) {
+  for (var i = 0; i < aantalVijand; i ++) {
     if (spelerX < vijandX[i]) {
       vijandKijktLinks();
     }
@@ -502,6 +502,11 @@ function setup() {
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('blue');
+
+  for (i = 0; i < aantalVijand; i ++) {
+    vijandX.push(900, 900);
+    vijandY.push(400, 900);
+  }
 }
 
 /**
