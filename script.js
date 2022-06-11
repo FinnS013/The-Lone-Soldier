@@ -33,8 +33,6 @@ var startSpelerY = 400;
 var spelerX = 400; // x-positie van speler
 var spelerY = 400; // y-positie van speler
 
-var startVijandX = 900;
-var startVijandY = 400;
 //var vijandX = 900; // x-positie van vijand
 //var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = true;
@@ -438,8 +436,8 @@ var verwerkBotsing = function () {
         kogelY - vijandY[i] < 130 &&
         kogelY - vijandY[i] > -120) {
         console.log("kogel raak");
-        vijandY[i] = startVijandY;
-        vijandX[i] = startVijandX + 450;
+        vijandY[i] = random(-100, 800);
+        vijandX[i] = 1350;
         kogelVliegt = false;
         kogelX = startKogelX;
         kogelY = startKogelY;
