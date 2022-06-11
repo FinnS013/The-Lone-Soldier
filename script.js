@@ -576,6 +576,8 @@ function draw() {
     spelerY = startSpelerY;
     vijandX = [600, 800, 200];
     vijandY = [600, 400, 200];
+    kogelX = startKogelX;
+    kogelY = startKogelY;
     score = startScore;
   }
   }
