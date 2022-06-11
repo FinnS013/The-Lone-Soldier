@@ -12,13 +12,18 @@
 
 const SPELEN = 1;
 const GAMEOVER = 2;
-var spelStatus = SPELEN;
+const STARTSCHERM = 3;
+const UITLEGSCHERM = 4;
+var spelStatus = STARTSCHERM;
 
 const KEY_W = 87;
 const KEY_A = 65;
 const KEY_S = 83;
 const KEY_D = 68;
+const KEY_H = 72;
 const KEY_ENTER = 13;
+const KEY_SPACE = 32;
+const KEY_ESC = 27;
 
 var startScore = 0;
 var score = 0;
@@ -521,6 +526,32 @@ function setup() {
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
 function draw() {
+  if (spelStatus === STARTSCHERM) {
+    fill(142, 6, 5);
+    rect(0, 0, 1280, 720);
+    textSize(100);
+    fill("white");
+    text("press space to start game", 100, 100);
+    text("press h for help screen", 100, 300);
+    if (keyIsDown(KEY_SPACE)) {
+      spelStatus = SPELEN;
+    }
+    if (keyIsDown(KEY_H)) {
+      spelStatus = UITLEGSCHERM;
+    }
+  }
+
+  if (spelStatus === UITLEGSCHERM) {
+    fill(35, 90, 112);
+    rect(0, 0, 1280, 720);
+    textSize(100);
+    fill("white");
+    text("press esc for main screen", 100, 100)
+    if (keyIsDown(KEY_ESC)) {
+      spelStatus = STARTSCHERM;
+    }
+  }
+  
   if (spelStatus === SPELEN) {
     beweegAlles();
     verwerkBotsing();
@@ -538,9 +569,8 @@ function draw() {
     text("Your score is" ,300, 300);
     text(Math.trunc(score), 550, 400);
     text("Press Enter for new game", 100, 500);
-  }
 
-  if (keyIsDown(KEY_ENTER)) {
+    if (keyIsDown(KEY_ENTER)) {
     spelStatus = SPELEN;
     spelerX = startSpelerX;
     spelerY = startSpelerY;
@@ -548,4 +578,6 @@ function draw() {
     vijandY[i] = startVijandY;
     score = startScore;
   }
+  }
+
 }
