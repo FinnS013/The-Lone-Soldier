@@ -510,8 +510,8 @@ function setup() {
     vijandY.push(400, 900);
   }
 */
-  vijandY=[900, 400, 200];
-  vijandX=[600, 400, 200];
+  vijandY=[600, 400, 200];
+  vijandX=[600, 800, 200];
   
 }
 
