@@ -51,6 +51,10 @@ var plaatsAfvurenY = 0;
 
 var kogelSnelheid = 1;
 
+var imgGameOver;
+var imgUitleg;
+var imgMainScreen;
+
 var aantalVijand = 3;
 var vijandX = [];
 var vijandY = [];
@@ -495,6 +499,18 @@ var checkGameOver = function () {
 /* setup() en draw() functies / hoofdprogramma   */
 /* ********************************************* */
 
+/**
+ * preload
+ * de code in deze functie wordt één keer uitgevoerd 
+ *  en laad de foto's
+ */
+
+function preload() {
+  imgGameOver = loadImage('foto/GameOver.PNG');
+  imgUitleg = loadImage('foto/Uitleg.PNG');
+  imgMainScreen = loadImage('foto/MainScreen.PNG');
+}
+
 
 /**
  * setup
@@ -525,8 +541,7 @@ function setup() {
  */
 function draw() {
   if (spelStatus === STARTSCHERM) {
-    fill(142, 6, 5);
-    rect(0, 0, 1280, 720);
+    image(imgMainScreen, 0, 0);
     textSize(100);
     fill("white");
     text("press space to start game", 100, 100);
@@ -540,8 +555,7 @@ function draw() {
   }
 
   if (spelStatus === UITLEGSCHERM) {
-    fill(35, 90, 112);
-    rect(0, 0, 1280, 720);
+    image(imgUitleg, 0, 0);
     textSize(100);
     fill("white");
     text("press esc for main screen", 100, 100)
@@ -559,8 +573,7 @@ function draw() {
     }
   }
   if (spelStatus === GAMEOVER) {
-    fill(0, 0, 0);// game-over scherm
-    rect(0, 0, 1280, 720)
+    image(imgGameOver, 0, 0);
     textSize(100);
     fill("white");
     text("GAME OVER", 300, 200);
