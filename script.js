@@ -56,8 +56,8 @@ var kogelSnelheid = 1;
 var aantalVijand = 3;
 var vijandX = [];
 var vijandY = [];
-var richtingVijandY = [];
 var richtingVijandX = [];
+var richtingVijandY = [];
 var correctieSnelheidVijand = [];
 var snelheidVijandY = [];
 var snelheidVijandX = [];
@@ -515,8 +515,8 @@ function setup() {
     vijandY.push(400, 900);
   }
 */
+  vijandX=[1000, 1100, 1200];
   vijandY=[600, 400, 200];
-  vijandX=[600, 800, 200];
   
 }
 
@@ -574,7 +574,7 @@ function draw() {
     spelStatus = SPELEN;
     spelerX = startSpelerX;
     spelerY = startSpelerY;
-    vijandX = [600, 800, 200];
+    vijandX = [1000, 1100, 1200];
     vijandY = [600, 400, 200];
     kogelX = startKogelX;
     kogelY = startKogelY;
