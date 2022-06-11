@@ -574,8 +574,8 @@ function draw() {
     spelStatus = SPELEN;
     spelerX = startSpelerX;
     spelerY = startSpelerY;
-    vijandX[i] = startVijandX;
-    vijandY[i] = startVijandY;
+    vijandX = [600, 800, 200];
+    vijandY = [600, 400, 200];
     score = startScore;
   }
   }
