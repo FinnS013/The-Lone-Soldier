@@ -70,6 +70,20 @@ var snelheidVijandX = [];
 /* ********************************************* */
 
 /**
+ * functies voor schermen zoals: gameOver, mainScreen, etc
+ */
+
+var resetGame = function() {
+  spelerX = startSpelerX;
+  spelerY = startSpelerY;
+  vijandX = [1000, 1100, 1200];
+  vijandY = [600, 400, 200];
+  kogelX = startKogelX;
+  kogelY = startKogelY;
+  score = startScore;
+}
+
+/**
  * functies voor in de tekenAlles functie
  */
 
@@ -581,16 +595,17 @@ function draw() {
     text("Your score is" ,300, 300);
     text(Math.trunc(score), 550, 400);
     text("Press Enter for new game", 100, 500);
+    text("press esc for main screen", 100, 600);
+
+    if(keyIsDown(KEY_ESC)) {
+      spelStatus = STARTSCHERM;
+      resetGame();
+    }
 
     if (keyIsDown(KEY_ENTER)) {
-    spelStatus = SPELEN;
-    spelerX = startSpelerX;
-    spelerY = startSpelerY;
-    vijandX = [1000, 1100, 1200];
-    vijandY = [600, 400, 200];
-    kogelX = startKogelX;
-    kogelY = startKogelY;
-    score = startScore;
+      spelStatus = SPELEN;
+      resetGame();
+    
   }
   }
 
