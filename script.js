@@ -88,7 +88,7 @@ var mainScreen = function() {
   image(imgMainScreen, 0, 0);
   textStyle(BOLD); // set text style naar bold staat in begint dus geldt voor alle
   textFont("Times New Roman"); // set font staat in het begin geld dus voor alle
-  fill(222, 186, 9); // gold
+  fill(166, 137, 10); // gold
   textSize(100);
   text("THE LOST SOLDIER",125, 200);
   textSize(75);
