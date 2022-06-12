@@ -34,8 +34,6 @@ var spelerX = 400; // x-positie van speler
 var spelerY = 400; // y-positie van speler
 var snelheidSpeler = 2;
 
-//var vijandX = 900; // x-positie van vijand
-//var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = true;
 var SnelheidVijand;
 
@@ -474,10 +472,10 @@ var beweegAlles = function () {
   }
 
   // kogel stopt buiten beeld
-  if (kogelVliegt === true && kogelY < -5 || 
-      kogelVliegt === true && kogelY > 725 ||
-      kogelVliegt === true && kogelX < -5 ||
-      kogelVliegt === true && kogelX > 1285) { // kogel verdwijnt
+  if (kogelVliegt === true && kogelY < -8 || 
+      kogelVliegt === true && kogelY > 728 ||
+      kogelVliegt === true && kogelX < -8 ||
+      kogelVliegt === true && kogelX > 1288) { // kogel verdwijnt
     kogelVliegt = false;
   }
     
@@ -589,12 +587,7 @@ function setup() {
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('blue');
-/*
-  for (i = 0; i < aantalVijand; i ++) {
-    vijandX.push(900, 900);
-    vijandY.push(400, 900);
-  }
-*/
+
   vijandX=[1000, 1100, 1200];
   vijandY=[600, 400, 200];
   
