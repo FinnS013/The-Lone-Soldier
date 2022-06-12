@@ -91,6 +91,13 @@ var mainScreen = function() {
   text("press h for help screen", 100, 300);
 }
 
+var uitlegscherm = function() {
+  image(imgUitleg, 0, 0);
+  textSize(100);
+  fill("white");
+  text("press esc for main screen", 100, 100)
+}
+
 /**
  * functies voor in de tekenAlles functie
  */
@@ -574,10 +581,7 @@ function draw() {
   }
 
   if (spelStatus === UITLEGSCHERM) {
-    image(imgUitleg, 0, 0);
-    textSize(100);
-    fill("white");
-    text("press esc for main screen", 100, 100)
+    uitlegscherm();
     if (keyIsDown(KEY_ESC)) {
       spelStatus = STARTSCHERM;
     }
