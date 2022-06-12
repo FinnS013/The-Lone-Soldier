@@ -50,7 +50,7 @@ var doelwitY = 0;
 var plaatsAfvurenX = 0;
 var plaatsAfvurenY = 0;
 
-var kogelSnelheid = 1;
+var kogelSnelheid = 4; 
 
 var imgGameOver;
 var imgUitleg;
