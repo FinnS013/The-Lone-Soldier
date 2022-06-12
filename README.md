@@ -21,20 +21,20 @@ Basis: uitleg, spelen, afgaan en punten
         - Zet je code in de functie beweegAlles()
         - Kies de afmeting van speler
         - Gebruik variabalen spelerX en spelerY als middelpunt van de speler
-- [ ] 4. *(pas de volgende stappen in de planning zelf aan)*
+- [x] 4. *(pas de volgende stappen in de planning zelf aan)*
 - [X] 5. teken je tegenspeler (vijanden of wild dier)
 - [x] 6. kogel (als die in je spel zit)
 - [x] 7. beweeg de tegenspeler
-- [ ] x. zet punten op het scherm(tegen spelers moeten verslagen worden) 
-- [ ] x. zorg dat je punten kunt scoren(vijanden kunnen dood gaan)
+- [x] x. zet punten op het scherm(tegen tijd score) 
+- [x] x. zorg dat je punten kunt scoren(score telt)
 - [X] x. zorg dat je af kunt(vijand hit je)
-- [ ] x. maak game-over-scherm
-- [ ] x. maak uitlegscherm
+- [x] x. maak game-over-scherm
+- [x] x. maak uitlegscherm
 
 ### Uitbreidingen 1
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
+- [x] *meerdere vijanden in array*
+- [x] *start scherm*
 - [ ] *later uitwerken*
 
 ### Uitbreidingen 2
