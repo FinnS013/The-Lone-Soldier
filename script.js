@@ -93,9 +93,16 @@ var mainScreen = function() {
 
 var uitlegscherm = function() {
   image(imgUitleg, 0, 0);
-  textSize(100);
-  fill("white");
-  text("press esc for main screen", 100, 100)
+  textSize(50);
+  fill("black");
+  text("press esc for main screen", 300, 650);
+  textSize(75);
+  text("try to stay alive",400, 200 );
+  textSize(40);
+  text("to move", 425, 350);
+  text("to shoot", 425, 500);
+  text("aim with mouse", 425, 550);
+  text("avoid", 900, 400);
 }
 
 var gameOverscreen = function() {
