@@ -534,8 +534,9 @@ var tekenAlles = function () {
   }
   
   // punten en health
-  textSize(25);
-  text(Math.trunc(score), 10, 30);
+  textSize(40);
+  fill(222, 186, 9);
+  text(Math.trunc(score), 15, 700);
 };
 
 /**
