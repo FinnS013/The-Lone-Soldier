@@ -414,7 +414,7 @@ var beweegAlles = function () {
   }
 
   // vijand
-  SnelheidVijand = 0.5 + (score / 50)
+  SnelheidVijand = 0.5 + (score / 15)
   for (var i = 0; i < aantalVijand; i ++) {
     richtingVijandY[i] = spelerY - vijandY[i];
     richtingVijandX[i] = spelerX - vijandX[i];
@@ -494,7 +494,7 @@ var verwerkBotsing = function () {
         kogelY - vijandY[i] < 130 &&
         kogelY - vijandY[i] > -120) {
         console.log("kogel raak");
-        vijandY[i] = random(-100, 800);
+        vijandY[i] = random(-300, 1000);
         vijandX[i] = 1350;
         kogelVliegt = false;
         kogelX = startKogelX;
