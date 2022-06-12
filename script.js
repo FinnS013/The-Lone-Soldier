@@ -98,6 +98,17 @@ var uitlegscherm = function() {
   text("press esc for main screen", 100, 100)
 }
 
+var gameOverscreen = function() {
+  image(imgGameOver, 0, 0);
+  textSize(100);
+  fill("white");
+  text("GAME OVER", 300, 200);
+  text("Your score is" ,300, 300);
+  text(Math.trunc(score), 550, 400);
+  text("Press Enter for new game", 100, 500);
+  text("press esc for main screen", 100, 600);
+}
+
 /**
  * functies voor in de tekenAlles functie
  */
@@ -596,15 +607,8 @@ function draw() {
     }
   }
   if (spelStatus === GAMEOVER) {
-    image(imgGameOver, 0, 0);
-    textSize(100);
-    fill("white");
-    text("GAME OVER", 300, 200);
-    text("Your score is" ,300, 300);
-    text(Math.trunc(score), 550, 400);
-    text("Press Enter for new game", 100, 500);
-    text("press esc for main screen", 100, 600);
-
+    gameOverscreen();
+    
     if(keyIsDown(KEY_ESC)) {
       spelStatus = STARTSCHERM;
       resetGame();
