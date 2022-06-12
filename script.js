@@ -416,14 +416,18 @@ var beweegAlles = function () {
   // vijand
   SnelheidVijand = 1 + (score / 15)
   for (var i = 0; i < aantalVijand; i ++) {
+    //afstand van vijand tot speler berekenen
     richtingVijandY[i] = spelerY - vijandY[i];
     richtingVijandX[i] = spelerX - vijandX[i];
-  
-    correctieSnelheidVijand[i] = Math.sqrt(((richtingVijandX[i] * richtingVijandX[i]) + (richtingVijandY[i] * richtingVijandY[i]))) / 1.4142
-    
+
+    // met pythagoras correctie berekenen voor de goede snelheid
+    correctieSnelheidVijand[i] = Math.sqrt(((richtingVijandX[i] * richtingVijandX[i]) + (richtingVijandY[i] * richtingVijandY[i]))) / Math.sqrt(2)
+
+    //snelheid van vijand berekenen
     snelheidVijandY[i] = richtingVijandY[i] / correctieSnelheidVijand[i];
     snelheidVijandX[i] = richtingVijandX[i] / correctieSnelheidVijand[i];
-    
+
+    //vijand bewegen
     if (vijandBeweegt === true) { // vijand beweegt
       vijandY[i] = vijandY[i] + SnelheidVijand * snelheidVijandY[i];
     }
@@ -450,7 +454,7 @@ var beweegAlles = function () {
   var richtingY = doelwitY - plaatsAfvurenY;
   var richtingX = doelwitX - plaatsAfvurenX;
 
-  var correctieSnelheid = Math.sqrt(((richtingX * richtingX) + (richtingY * richtingY))) / 1.4142
+  var correctieSnelheid = Math.sqrt(((richtingX * richtingX) + (richtingY * richtingY))) / Math.sqrt(2)
   
   var snelheidY = richtingY / correctieSnelheid;
   var snelheidX = richtingX / correctieSnelheid;
