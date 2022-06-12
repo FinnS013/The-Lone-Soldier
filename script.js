@@ -32,11 +32,12 @@ var startSpelerX = 400;
 var startSpelerY = 400;
 var spelerX = 400; // x-positie van speler
 var spelerY = 400; // y-positie van speler
+var snelheidSpeler = 2;
 
 //var vijandX = 900; // x-positie van vijand
 //var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = true;
-var SnelheidVijand = 0.5;
+var SnelheidVijand = 1;
 
 var startKogelX = -10;
 var startKogelY = 0;
@@ -397,19 +398,19 @@ var spelerKijktLinks = function() {
 var beweegAlles = function () {
   // speler
   if (keyIsDown(KEY_W) && spelerY - 50 > 0) {
-    spelerY = spelerY - 1;
+    spelerY = spelerY - snelheidSpeler;
   }
 
   if (keyIsDown(KEY_S) && spelerY + 100 < 720) {
-    spelerY = spelerY + 1;
+    spelerY = spelerY + snelheidSpeler;
   }
 
   if (keyIsDown(KEY_A) && spelerX - 10 > 0) {
-    spelerX = spelerX - 1;
+    spelerX = spelerX - snelheidSpeler;
   }
 
   if (keyIsDown(KEY_D) && spelerX + 45 < 1280) {
-    spelerX = spelerX + 1;
+    spelerX = spelerX + snelheidSpeler;
   }
 
   // vijand
