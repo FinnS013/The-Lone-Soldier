@@ -87,10 +87,12 @@ var mainScreen = function() {
   image(imgMainScreen, 0, 0);
   textStyle(BOLD); // set text style naar bold staat in begint dus geldt voor alle
   textFont("Times New Roman"); // set font staat in het begin geld dus voor alle
+  fill(133, 116, 31); // dull gold
   textSize(100);
-  fill("gold");
-  text("press space to start game", 100, 100);
-  text("press h for help screen", 100, 300);
+  text("THE LOST SOLDIER",125, 200);
+  textSize(75);
+  text("press space to start game", 200, 550);
+  text("press h for help screen", 200, 650);
 }
 
 var uitlegscherm = function() {
@@ -110,12 +112,13 @@ var uitlegscherm = function() {
 var gameOverscreen = function() {
   image(imgGameOver, 0, 0);
   textSize(100);
-  fill("white");
+  fill(222, 186, 9); // gold
   text("GAME OVER", 300, 200);
   text("Your score is" ,300, 300);
   text(Math.trunc(score), 550, 400);
-  text("Press Enter for new game", 100, 500);
-  text("press esc for main screen", 100, 600);
+  textSize(75);
+  text("Press Enter for new game", 225, 500);
+  text("press esc for main screen", 225, 600);
 }
 
 /**
