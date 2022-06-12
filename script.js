@@ -438,27 +438,33 @@ var beweegAlles = function () {
   }
   
   // kogel
+  // opslaan locatie van afvuren en locatie doelwit in een var
   if (mouseIsPressed && kogelVliegt === false) {
     doelwitX = mouseX;
     doelwitY = mouseY;
     plaatsAfvurenX = spelerX;
     plaatsAfvurenY = spelerY;
   }
-  
+
+  // kogel op start locatie zetten en activeren afvuren
   if (kogelVliegt === false && mouseIsPressed) {//schiet
     kogelVliegt = true;
     kogelX = plaatsAfvurenX;
     kogelY = plaatsAfvurenY;
   }
 
+  // richting kogel berekenen
   var richtingY = doelwitY - plaatsAfvurenY;
   var richtingX = doelwitX - plaatsAfvurenX;
 
+  // correctie snelheid berekenen met pythagoras
   var correctieSnelheid = Math.sqrt(((richtingX * richtingX) + (richtingY * richtingY))) / Math.sqrt(2)
-  
+
+  //snelheid berekenen
   var snelheidY = richtingY / correctieSnelheid;
   var snelheidX = richtingX / correctieSnelheid;
-  
+
+  //kogel afvuren
   if (kogelVliegt === true) { // kogel vliegt
     kogelY = kogelY + kogelSnelheid * snelheidY;
   }
@@ -467,10 +473,11 @@ var beweegAlles = function () {
     kogelX = kogelX + kogelSnelheid * snelheidX;
   }
 
-  if (kogelVliegt === true && kogelY < 0 || 
-      kogelVliegt === true && kogelY > 720 ||
-      kogelVliegt === true && kogelX < 0 ||
-      kogelVliegt === true && kogelX > 1280) { // kogel verdwijnt
+  // kogel stopt buiten beeld
+  if (kogelVliegt === true && kogelY < -5 || 
+      kogelVliegt === true && kogelY > 725 ||
+      kogelVliegt === true && kogelX < -5 ||
+      kogelVliegt === true && kogelX > 1285) { // kogel verdwijnt
     kogelVliegt = false;
   }
     
