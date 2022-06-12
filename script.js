@@ -54,6 +54,7 @@ var kogelSnelheid = 1;
 var imgGameOver;
 var imgUitleg;
 var imgMainScreen;
+var imgAchtergrond;
 
 var aantalVijand = 3;
 var vijandX = [];
@@ -456,8 +457,7 @@ var verwerkBotsing = function () {
  */
 var tekenAlles = function () {
   // achtergrond
-  fill("brown");
-  rect(0,0, 1280,720);
+  image(imgAchtergrond, 0, 0);
   
   // vijand
   for (var i = 0; i < aantalVijand; i ++) {
@@ -509,6 +509,7 @@ function preload() {
   imgGameOver = loadImage('foto/GameOver.PNG');
   imgUitleg = loadImage('foto/Uitleg.PNG');
   imgMainScreen = loadImage('foto/MainScreen.PNG');
+  imgAchtergrond = loadImage('foto/achtergrond.PNG');
 }
 
 
@@ -543,7 +544,7 @@ function draw() {
   if (spelStatus === STARTSCHERM) {
     image(imgMainScreen, 0, 0);
     textSize(100);
-    fill("white");
+    fill("gold");
     text("press space to start game", 100, 100);
     text("press h for help screen", 100, 300);
     if (keyIsDown(KEY_SPACE)) {
