@@ -83,6 +83,14 @@ var resetGame = function() {
   score = startScore;
 }
 
+var mainScreen = function() {
+  image(imgMainScreen, 0, 0);
+  textSize(100);
+  fill("gold");
+  text("press space to start game", 100, 100);
+  text("press h for help screen", 100, 300);
+}
+
 /**
  * functies voor in de tekenAlles functie
  */
@@ -556,11 +564,7 @@ function setup() {
  */
 function draw() {
   if (spelStatus === STARTSCHERM) {
-    image(imgMainScreen, 0, 0);
-    textSize(100);
-    fill("gold");
-    text("press space to start game", 100, 100);
-    text("press h for help screen", 100, 300);
+    mainScreen();
     if (keyIsDown(KEY_SPACE)) {
       spelStatus = SPELEN;
     }
