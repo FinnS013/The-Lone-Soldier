@@ -37,7 +37,7 @@ var snelheidSpeler = 2;
 //var vijandX = 900; // x-positie van vijand
 //var vijandY = 400; // y-positie van vijand
 var vijandBeweegt = true;
-var SnelheidVijand = 1;
+var SnelheidVijand;
 
 var startKogelX = -10;
 var startKogelY = 0;
@@ -414,7 +414,7 @@ var beweegAlles = function () {
   }
 
   // vijand
-  SnelheidVijand = 0.5 + (score / 15)
+  SnelheidVijand = 1 + (score / 15)
   for (var i = 0; i < aantalVijand; i ++) {
     richtingVijandY[i] = spelerY - vijandY[i];
     richtingVijandX[i] = spelerX - vijandX[i];
