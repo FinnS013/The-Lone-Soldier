@@ -58,13 +58,13 @@ var imgMainScreen;
 var imgAchtergrond;
 
 var aantalVijand = 3;
-var vijandX = [];
-var vijandY = [];
-var richtingVijandX = [];
-var richtingVijandY = [];
-var correctieSnelheidVijand = [];
-var snelheidVijandY = [];
-var snelheidVijandX = [];
+var vijandX = []; // array x-posities van vijand
+var vijandY = []; // array y-posities van vijand
+var richtingVijandX = []; // array richting van x coördinaat van vijand
+var richtingVijandY = []; // array richting van y coördinaat van vijand
+var correctieSnelheidVijand = []; // array correctie snelheid van vijand
+var snelheidVijandY = []; // array snelheid van x coördinaat van vijand
+var snelheidVijandX = []; // array snelheid van y coördinaat van vijand
 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
