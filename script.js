@@ -85,8 +85,8 @@ var resetGame = function() {
 
 var mainScreen = function() {
   image(imgMainScreen, 0, 0);
-  textStyle(BOLD);
-  textFont("Times New Roman"); // set font doordat het in begin staat geld voor alle
+  textStyle(BOLD); // set text style naar bold staat in begint dus geldt voor alle
+  textFont("Times New Roman"); // set font staat in het begin geld dus voor alle
   textSize(100);
   fill("gold");
   text("press space to start game", 100, 100);
